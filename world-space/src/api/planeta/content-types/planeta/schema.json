@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "planetas",
+  "info": {
+    "singularName": "planeta",
+    "pluralName": "planetas",
+    "displayName": "planeta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "area": {
+      "type": "float"
+    },
+    "coloracao": {
+      "type": "string"
+    },
+    "temperatura": {
+      "type": "decimal"
+    },
+    "sistema_solar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sistema-solar.sistema-solar",
+      "inversedBy": "planeta"
+    }
+  }
+}

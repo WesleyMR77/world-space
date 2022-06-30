@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sistema_solars",
+  "info": {
+    "singularName": "sistema-solar",
+    "pluralName": "sistema-solars",
+    "displayName": "sistemaSolar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "quantidadePlaneta": {
+      "type": "integer"
+    },
+    "planeta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::planeta.planeta",
+      "inversedBy": "sistema_solar"
+    }
+  }
+}
